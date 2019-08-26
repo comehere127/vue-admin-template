@@ -1,0 +1,63 @@
+//base color
+$blue: #409eff;
+$light-blue: #3a71a8;
+$red: #f56c6c;
+$pink: #e65d6e;
+$green: #13ce66;
+$tiffany: #4ab7bd;
+$yellow: #fec171;
+$orange: #f26b21;
+$panGreen: #30b08f;
+
+//sidebar
+$menuText: #bfcbd9;
+$menuActiveText: #409eff;
+$subMenuActiveText: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: #304156;
+$menuHover: #263445;
+
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+
+$color-black: #1f2d3d;
+$color-black-light: #324057;
+$color-black-exact-light: #475669;
+
+$color-silver: #8492a6;
+$color-silver-light: #99a9bf;
+$color-silver-exact-light: #c0ccda;
+
+$color-gray: #d3dce6;
+$color-gray-light: #e5e9f2;
+$color-gray-exact-light: #eff2f7;
+
+$sideBarWidth: 220px;
+$select-theme: 2;
+$color-theme: #2196f3;
+
+@if ($select-theme == 1) {
+  $color-theme: #f26b21;
+} @else if ($select-theme == 2) {
+  $color-theme: #409eff;
+} @else if ($select-theme == 3) {
+  $color-theme: #13ce66;
+} @else if ($select-theme == 4) {
+  $color-theme: #999;
+} @else if ($select-theme == 5) {
+  $color-theme: #f00;
+} @else {
+  $color-theme: #e80074;
+}
+//the :export directive is the magic sauce for webpack
+//https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

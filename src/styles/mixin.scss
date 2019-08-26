@@ -1,0 +1,85 @@
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pct($pct) {
+  width: #{$pct};
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin triangle($width, $height, $color, $direction) {
+  $width: $width/2;
+  $color-border-style: $height solid $color;
+  $transparent-border-style: $width solid transparent;
+  height: 0;
+  width: 0;
+
+  @if $direction==up {
+    border-bottom: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  } @else if $direction==right {
+    border-left: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  } @else if $direction==down {
+    border-top: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  } @else if $direction==left {
+    border-right: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+}
+
+@mixin dotLoading($name) {
+  animation: dots#{$name} 1s steps(5, end) infinite;
+}
+
+@mixin colorDots($color, $name) {
+  @keyframes dots#{$name} {
+    0%,
+    20% {
+      color: rgba($color, 0);
+      text-shadow: 0.35em 0 0 rgba($color, 0), 0.7em 0 0 rgba($color, 0);
+    }
+    40% {
+      color: $color;
+      text-shadow: 0.35em 0 0 rgba($color, 0), 0.7em 0 0 rgba($color, 0);
+    }
+    60% {
+      text-shadow: 0.35em 0 0 $color, 0.7em 0 0 rgba($color, 0);
+    }
+    80%,
+    100% {
+      text-shadow: 0.35em 0 0 $color, 0.7em 0 0 $color;
+    }
+  }
+}
