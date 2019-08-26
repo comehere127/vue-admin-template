@@ -1,7 +1,7 @@
 {
-  "name": "gt-admin-html",
+  "name": "vue-admin-template",
   "version": "1.0.0",
-  "description": "GT ADMIN tool based on VUEJS 2.0",
+  "description": "GT admin tool based on VUEJS 2.0",
   "author": "TuDHM | tudhm@vng.com.vn",
   "license": "MIT",
   "scripts": {
@@ -33,12 +33,11 @@
     "admin",
     "dashboard",
     "element-ui",
-    "management-system",
-    "gt-admin-tool"
+    "management-system"
   ],
   "repository": {
-    "type": "gitlab",
-    "url": "http://gitlab.mto.zing.vn/gt-admin/gt-admin-html.git"
+    "type": "github",
+    "url": "https://github.com/comehere127/vue-admin-template.git"
   },
   "dependencies": {
     "@ncform/ncform": "^1.1.0",
