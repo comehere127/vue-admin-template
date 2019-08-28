@@ -32,6 +32,7 @@ function getDate() {
   var currentDate = new Date()
   return '-' + getTime(currentDate) + '-' + currentDate.getFullYear() + ('0' + (currentDate.getMonth() + 1)).slice(-2) + ('0' + currentDate.getDate()).slice(-2)
 }
+
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {
   /**
